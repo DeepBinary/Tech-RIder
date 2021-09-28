@@ -1,14 +1,12 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering.VirtualTexturing;
-using Cinemachine;
 
-public class CarController : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
-    #region Variables
-    // Movement
-    [Header("Movement")]
+	#region Variables
+	// Movement
+	[Header("Movement")]
 	public float speed = 20f;
 	public float rotationSpeed = 2f;
 
@@ -16,7 +14,7 @@ public class CarController : MonoBehaviour
 	public Vector2 Jumpforce;
 	[HideInInspector] public bool ismoveing = true;
 	[HideInInspector] public bool isGrounded = false;
-    	[HideInInspector] public bool moveback = false;
+	[HideInInspector] public bool moveback = false;
 	[HideInInspector] public bool move = false;
 	[HideInInspector] public bool Jump = false;
 	[HideInInspector] public bool move_Right_side = false;
@@ -30,13 +28,13 @@ public class CarController : MonoBehaviour
 	// post processing
 	[Header("Post Processing")]
 	public Camera GameCamera;
-    #endregion
+	#endregion
 
-    Vector2 mousepos;
+	Vector2 mousepos;
 	private void Update()
 	{
 		if (ismoveing == true)
-		{		
+		{
 
 			// W key
 			if (Input.GetKeyDown(KeyCode.W))
@@ -102,9 +100,9 @@ public class CarController : MonoBehaviour
 
 
 		if (Jump == true)
-        {
+		{
 			rb.velocity = Jumpforce;
-        }
+		}
 
 
 		if (move == true)
@@ -116,7 +114,7 @@ public class CarController : MonoBehaviour
 		}
 
 		if (moveback == true)
-        {
+		{
 			if (isGrounded)
 			{
 				rb.AddForce(transform.right * speed * Time.fixedDeltaTime * 100f * -1f, ForceMode2D.Force);
@@ -124,22 +122,22 @@ public class CarController : MonoBehaviour
 		}
 
 		if (move_Right_side == true)
-        {
+		{
 			if (!isGrounded)
-            {
+			{
 				rb.AddTorque(-rotationSpeed);
 				rb.AddForce(new Vector2(speed, 0));
-            }
-        }
+			}
+		}
 
 		if (move_left_side == true)
-        {
+		{
 			if (!isGrounded)
-            {
+			{
 				rb.AddTorque(rotationSpeed);
 				rb.AddForce(new Vector2(-speed, 0));
-            }
-        }
+			}
+		}
 	}
 
 	private void OnCollisionEnter2D()
@@ -151,13 +149,13 @@ public class CarController : MonoBehaviour
 	private void OnCollisionExit2D()
 	{
 		isGrounded = false;
-	}	
+	}
 
-    private void Start()
-    {
+	private void Start()
+	{
 		rb = GetComponent<Rigidbody2D>();
 		Destroy(polygoncollider);
 		polygoncollider = GetComponent<PolygonCollider2D>();
 		gameObject.AddComponent<PolygonCollider2D>();
-    }
+	}
 }

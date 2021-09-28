@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Rendering.VirtualTexturing;
+using UnityEngine;	
 using Cinemachine;
 
 public class CarController : MonoBehaviour

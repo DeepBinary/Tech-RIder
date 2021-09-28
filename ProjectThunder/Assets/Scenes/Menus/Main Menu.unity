@@ -1767,9 +1767,9 @@ MonoBehaviour:
   MainVolumeSlider: {fileID: 1065915294}
   volume: 0
   MainMixer: {fileID: 24100000, guid: 0a65987c52fd0274499df8e8235dd83a, type: 2}
-  musicVolume: {fileID: 0}
+  musicVolume: {fileID: 812757995}
   musicvolume: 0
-  MusicMixer: {fileID: 0}
+  MusicMixer: {fileID: 24100000, guid: 8b933ce2f84a0ce42b8de2b230aee2b3, type: 2}
 --- !u!1 &677670316
 GameObject:
   m_ObjectHideFlags: 0
@@ -1972,7 +1972,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 648612924}
-        m_MethodName: SetVolume
+        m_MethodName: SetMusicVolume
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
