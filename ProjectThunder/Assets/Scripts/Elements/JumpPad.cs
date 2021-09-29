@@ -24,7 +24,7 @@ public class JumpPad : MonoBehaviour
     {
         physicsmaterial2d = new PhysicsMaterial2D();
         boxcollider = GetComponent<BoxCollider2D>();
-        Player = FindObjectOfType<CarController>().gameObject;
+        Player = FindObjectOfType<PlayerMovement>().gameObject;
         boxcollider.sharedMaterial = physicsmaterial2d;        
     }
 

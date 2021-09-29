@@ -5,7 +5,7 @@ using UnityEngine;
 public class LoseCollider : MonoBehaviour
 {
     public InfoPanel LoseMenu;
-    public CarController carcontroller;
+    public PlayerMovement carcontroller;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -18,7 +18,7 @@ public class LoseCollider : MonoBehaviour
     private void Start()
     {
         LoseMenu.gameObject.SetActive(false);
-        carcontroller = FindObjectOfType<CarController>();
+        carcontroller = FindObjectOfType<PlayerMovement>();
     }
 
 }

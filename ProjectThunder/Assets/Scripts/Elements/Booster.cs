@@ -19,6 +19,6 @@ public class Booster : MonoBehaviour
     private void Start()
     {
         OnBoost = false;
-        rb = FindObjectOfType<CarController>().gameObject.GetComponent<Rigidbody2D>();
+        rb = FindObjectOfType<PlayerMovement>().gameObject.GetComponent<Rigidbody2D>();
     }
 }

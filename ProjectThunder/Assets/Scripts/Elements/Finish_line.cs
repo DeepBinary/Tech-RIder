@@ -8,7 +8,7 @@ public class Finish_line : MonoBehaviour
     public LevelLoader LevelLoader;
     public GameObject YouWinUI;
     public GameObject levelcanvas;
-    public gamecanvasmanager gamecanvasmanager;
+    public GameCanvasManager gamecanvasmanager;
     public GameObject[] LoseColliders;
 
     [Header("Fireworks particles")]
@@ -39,7 +39,7 @@ public class Finish_line : MonoBehaviour
             }
         }
 
-        gamecanvasmanager = FindObjectOfType<gamecanvasmanager>();
+        gamecanvasmanager = FindObjectOfType<GameCanvasManager>();
         YouWinUI.SetActive(false);
 
     }

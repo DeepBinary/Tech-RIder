@@ -1761,15 +1761,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 648612917}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 416426a9c54978a47a8ad24661110cb9, type: 3}
+  m_Script: {fileID: 11500000, guid: 83ac1228cecea4f4089404222ad06590, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainVolumeSlider: {fileID: 1065915294}
-  volume: 0
   MainMixer: {fileID: 24100000, guid: 0a65987c52fd0274499df8e8235dd83a, type: 2}
-  musicVolume: {fileID: 812757995}
-  musicvolume: 0
+  VolumeSlider: {fileID: 1065915294}
+  Volume: 0
   MusicMixer: {fileID: 24100000, guid: 8b933ce2f84a0ce42b8de2b230aee2b3, type: 2}
+  musicvolumeSlider: {fileID: 812757995}
+  musicvolume: 0
+  gamecamera: {fileID: 0}
+  Qualitydropdown: {fileID: 0}
+  QualityIndex: 0
+  postprocessingtoggle: {fileID: 0}
+  PostProcessingProfiles: []
+  currentpostprocessingindex: 0
+  ResoutionDropdown: {fileID: 0}
+  resolutionindex: 0
+  isfullscreentoggle: {fileID: 0}
+  FullscreenData: 0
 --- !u!1 &677670316
 GameObject:
   m_ObjectHideFlags: 0
@@ -1971,7 +1981,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 648612924}
+      - m_Target: {fileID: 0}
         m_MethodName: SetMusicVolume
         m_Mode: 0
         m_Arguments:
@@ -2738,7 +2748,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 648612924}
+      - m_Target: {fileID: 0}
         m_MethodName: SetVolume
         m_Mode: 0
         m_Arguments:
