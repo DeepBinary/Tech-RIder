@@ -138,6 +138,7 @@ public class PlayerMovement : MonoBehaviour
 				rb.AddForce(new Vector2(-speed, 0));
 			}
 		}
+
 	}
 
 	private void OnCollisionEnter2D()
