@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayMenu : MonoBehaviour
 {
     public float animationtime;
+    public Image background;
     public void OnEnable()
     {
         this.gameObject.GetComponent<CanvasGroup>().alpha = 0;

@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 using TMPro;
-using UnityEngine.Rendering.PostProcessing;
 
 public class SettingsMenu : MonoBehaviour
 {
@@ -27,10 +26,6 @@ public class SettingsMenu : MonoBehaviour
     // Quality
     public TMP_Dropdown Qualitydropdown;
     public int QualityIndex;
-    // Post Processing
-    public Toggle postprocessingtoggle;
-    public PostProcessProfile[] PostProcessingProfiles;
-    public bool currentpostprocessingindex;
     // Resolutions
     public TMP_Dropdown ResoutionDropdown;
     public int resolutionindex;
@@ -75,22 +70,6 @@ public class SettingsMenu : MonoBehaviour
         Qualitydropdown.value = QualityIndex;
         QualityIndex = Qualitydropdown.value;
 
-        //UpdatePostProcessing
-        if (postprocessingtoggle.isOn) 
-        {
-            int debugindex = 0;
-            gamecamera.GetComponent<PostProcessVolume>().profile = PostProcessingProfiles[debugindex];
-            currentpostprocessingindex = postprocessingtoggle.isOn;
-
-        } else if (!postprocessingtoggle.isOn)
-        {
-            int debugindex = 1;
-            gamecamera.GetComponent<PostProcessVolume>().profile = PostProcessingProfiles[debugindex];
-            currentpostprocessingindex = postprocessingtoggle.isOn;
-        }
-
-        postprocessingtoggle.isOn = currentpostprocessingindex;
-
         // Update isfullscreen
         isfullscreentoggle.isOn = FullscreenData;
     }
@@ -110,7 +89,6 @@ public class SettingsMenu : MonoBehaviour
         QualitySettings.SetQualityLevel(QualityIndex);
         musicvolume = data.musicvolume;
         musicvolumeSlider.value = musicvolume;
-        currentpostprocessingindex = data.postprocessing;
         resolutionindex = data.resolutionindex;
         ResoutionDropdown.value = resolutionindex;
         FullscreenData = data.isfullscreen;

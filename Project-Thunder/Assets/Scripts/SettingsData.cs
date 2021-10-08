@@ -11,7 +11,6 @@ public class SettingsData
 
     //Graphics
     public int qualityindex;
-    public bool postprocessing;
     public int resolutionindex;
     public bool isfullscreen;
 
@@ -22,7 +21,6 @@ public class SettingsData
         volume = SettingsData.Volume;
         musicvolume = SettingsData.musicvolume;
         qualityindex = SettingsData.QualityIndex;
-        postprocessing = SettingsData.currentpostprocessingindex;
         isfullscreen = SettingsData.FullscreenData;
     }
 }
