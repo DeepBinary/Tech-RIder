@@ -1,6 +1,4 @@
-# Project-Thunder
-this is a racing + parkour + action game where the player tries to end the rule of the universe manipulator (final boss) 
+# Tech-Rider
+Tech rider is an open source project (unity 2020.3.20LTS), where the player's objective is to end the rule of the universe manipulator. 
 
-(the game is orignally named tech rider)
-
-The game is open source. which means that you can contribute to the game and make it better.
+But the player and the combat is quite different. the player is a car, and a soul (weapon) follows the mouse and has a limited range and is used to deal damage.
