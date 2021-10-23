@@ -102,6 +102,7 @@ public class PlayerMovement : MonoBehaviour
 		if (Jump == true)
 		{
 			rb.velocity = Jumpforce;
+			Jump = false;
 		}
 
 

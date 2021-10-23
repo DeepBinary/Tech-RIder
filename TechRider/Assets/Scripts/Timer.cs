@@ -6,13 +6,14 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
+    [Header("TimerStats")]
     public TextMeshProUGUI timertext;
-    private float starttime;
-    private bool finish = false;
-    public TextMeshProUGUI YouWinScreenTimer;
+    public TextMeshProUGUI WinScreenTimer;
     private float t;
+    private float starttime;
     private string minutes;
     private string seconds;
+    private bool finish = false;
 
     [Header("Update timer here also")]
     public TextMeshProUGUI youwinscreencoins;
@@ -46,8 +47,8 @@ public class Timer : MonoBehaviour
 
     public void youwinscreentimerpdate()
     {
-        YouWinScreenTimer.text = minutes + ":" + seconds;
-        youwinscreencoins.text = "+" + manager.Score.ToString();
+        WinScreenTimer.text = minutes + ":" + seconds;
+        WinScreenTimer.text = "+" + manager.Score.ToString();
     }
 
 }
