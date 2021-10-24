@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Booster : MonoBehavior
+public class NitroDestructable : MonoBehaviour
 {
     [HideInInspector] public bool IsDeleted;
     public float BoostForce;
@@ -11,15 +11,16 @@ public class Booster : MonoBehavior
     {
         if (collision.CompareTag("Player"))
         {
-            IsDeleted = false;
             GameObject player = collision.gameObject;
+            IsDeleted = false;
             player.GetComponent<Rigidbody2D>().AddForce(player.transform.right * BoostForce);
             Instantiate(particles, transform.position, transform.rotation);
+            Destroy(this.gameObject);
         }
     }
 
-    private void Awake()
+    private void Start()
     {
-        IsDeleted = true;
+        
     }
 }
