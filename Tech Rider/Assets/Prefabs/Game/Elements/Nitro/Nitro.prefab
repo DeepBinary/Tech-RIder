@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7290888024983845283}
   - component: {fileID: 7290888024983845282}
-  - component: {fileID: 7290888024983845285}
   - component: {fileID: 7290888024983845280}
+  - component: {fileID: 1897863802797924368}
   m_Layer: 0
   m_Name: Nitro
   m_TagString: Untagged
@@ -85,19 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7290888024983845285
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7290888024983845284}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f19bd6ef1682554daeb92b5b7a5a219, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BoostForce: 500
 --- !u!61 &7290888024983845280
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -124,6 +111,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 10.24, y: 10.24}
   m_EdgeRadius: 0
+--- !u!114 &1897863802797924368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7290888024983845284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc774717c450645438a323076fe2af7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsDeleted: 0
+  BoostForce: 500
+  particles: {fileID: 7121027615269769932, guid: ed7e97a3c3bd0fb42b4c30da436f632b, type: 3}
 --- !u!1 &7290888025276272336
 GameObject:
   m_ObjectHideFlags: 0
