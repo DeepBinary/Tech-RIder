@@ -6,10 +6,10 @@ using TMPro;
 public class Coin : MonoBehaviour
 {
     public int CoinsRewarded;
-    private Manager gamemanager;
+    private GameManager gamemanager;
     void Start()
     {
-        gamemanager = FindObjectOfType<Manager>();
+        gamemanager = FindObjectOfType<GameManager>();
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -20,7 +20,7 @@ public class Coin : MonoBehaviour
     }
     public void RewardCoins()
     {
-        gamemanager.Score += CoinsRewarded;
+        gamemanager.Coins += CoinsRewarded;
         Destroy(this.gameObject);
     }
 }
