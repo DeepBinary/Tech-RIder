@@ -1,6 +1,3 @@
-using System.Reflection;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameCanvas : MonoBehaviour
@@ -44,7 +41,7 @@ public class GameCanvas : MonoBehaviour
     public void ExitPause() 
     {
         ispaused = false;
-        PauseMenu.SetActive(false);
         Time.timeScale = 1f;
+        PauseMenu.SetActive(false);
     }
 }

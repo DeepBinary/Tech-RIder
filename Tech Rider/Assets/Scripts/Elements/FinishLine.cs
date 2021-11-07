@@ -3,20 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class FinishLine : MonoBehaviour
-{
-    
-    [Header("Postprocessinngg")]  
+{ 
     public LevelLoader LevelLoader;
-    public GameObject YouWinUI;
-    public GameObject levelcanvas;
+    public GameObject Youwinui, gamecanvas, fireworks;
     public GameCanvasManager gamecanvasmanager;
-
-    [Header("Fireworks particles")]
-    public GameObject fireworks;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        if (collision.CompareTag("Player"))
         {
             loadyouwinscreen();
         }
@@ -25,14 +19,16 @@ public class FinishLine : MonoBehaviour
     private void Start()
     {
         gamecanvasmanager = FindObjectOfType<GameCanvasManager>();
-        YouWinUI.SetActive(false);
+        Youwinui.SetActive(false);
     }
 
     public void loadyouwinscreen()
     {
-        levelcanvas.SetActive(false);
+        gamecanvas.SetActive(false);
+
         Time.timeScale = 0.2f;
-        YouWinUI.SetActive(true);
+        Youwinui.SetActive(true);
+
         Instantiate(fireworks, transform.position, transform.rotation);
     }
 }

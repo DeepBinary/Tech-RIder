@@ -15,12 +15,8 @@ public class Coin : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            RewardCoins();
+            gamemanager.AddCoins(CoinsRewarded);
+            Destroy(this.gameObject);
         }
-    }
-    public void RewardCoins()
-    {
-        gamemanager.Coins += CoinsRewarded;
-        Destroy(this.gameObject);
     }
 }

@@ -7,17 +7,18 @@ using TMPro;
 public class SliderDataUpdater : MonoBehaviour
 {
     public Slider SliderToUpdate;
-    public TextMeshProUGUI TextToShow;
+    public TextMeshProUGUI DisplayText;
     public string additionalstring;
     // Start is called before the first frame update
     void Start()
     {
-        TextToShow = GetComponent<TextMeshProUGUI>();
+        
+        DisplayText = GetComponent<TextMeshProUGUI>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        TextToShow.text = SliderToUpdate.value.ToString() + " " + additionalstring;
+        DisplayText.text = SliderToUpdate.value.ToString() + " " + additionalstring;
     }
 }
