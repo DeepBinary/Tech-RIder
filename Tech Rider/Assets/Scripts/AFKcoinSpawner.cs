@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AFKcoinSpawner : MonoBehaviour
 {
-    public float frequency;
+    public float CoinDropRate;
     public GameObject Coins;
 
     [Header("Force")]
@@ -13,7 +13,7 @@ public class AFKcoinSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("SpawnCoins", 0.001f, frequency);
+        InvokeRepeating("SpawnCoins", 0.001f, CoinDropRate);
     }
 
     // Update is called once per frame
