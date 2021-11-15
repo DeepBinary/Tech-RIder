@@ -18,8 +18,7 @@ public class PlayerMovement : MonoBehaviour
 	[HideInInspector] public bool move = false;
 	[HideInInspector] public bool Jump = false;
 	[HideInInspector] public bool move_Right_side = false;
-	[HideInInspector] public bool move_left_side = false;
-
+	[HideInInspector] public bool move_left_side = false;					
 
 	// BackEnd References
 	private Rigidbody2D rb;

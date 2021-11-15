@@ -20,5 +20,4 @@ public class LoseCollider : MonoBehaviour
         LoseMenu.gameObject.SetActive(false);
         carcontroller = FindObjectOfType<PlayerMovement>();
     }
-
 }
