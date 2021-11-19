@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using CodeMonkey.Utils;
+using CodeMonkey;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -9,9 +11,11 @@ public class PlayerMovement : MonoBehaviour
 	[Header("Movement")]
 	public float speed = 20f;
 	public float rotationSpeed = 2f;
+	public float DashForce;
 
 	[Space(15f)]
 	public Vector2 Jumpforce;
+	[HideInInspector] public bool Dash = false;
 	[HideInInspector] public bool ismoveing = true;
 	[HideInInspector] public bool isGrounded = false;
 	[HideInInspector] public bool moveback = false;
@@ -20,13 +24,18 @@ public class PlayerMovement : MonoBehaviour
 	[HideInInspector] public bool move_Right_side = false;
 	[HideInInspector] public bool move_left_side = false;					
 
-	// BackEnd References
+	// DeepBack
 	private Rigidbody2D rb;
 	private PolygonCollider2D polygoncollider;
 
 	// post processing
 	[Header("Post Processing")]
 	public Camera GameCamera;
+
+	// SpecialFX
+	[Header("SpeicalFX")]
+	public GameObject jumpVFX;
+	public GameObject DashVFX;
 	#endregion
 
 	Vector2 mousepos;
@@ -34,6 +43,10 @@ public class PlayerMovement : MonoBehaviour
 	{
 		if (ismoveing == true)
 		{
+			if (Input.GetMouseButtonDown(1))
+            {
+				DashPlayer();
+            }
 
 			// W key
 			if (Input.GetKeyDown(KeyCode.W))
@@ -100,6 +113,7 @@ public class PlayerMovement : MonoBehaviour
 
 		if (Jump == true)
 		{
+			Instantiate(jumpVFX, transform.position, transform.rotation);
 			rb.velocity = Jumpforce;
 			Jump = false;
 		}
@@ -158,5 +172,14 @@ public class PlayerMovement : MonoBehaviour
 		Destroy(polygoncollider);
 		polygoncollider = GetComponent<PolygonCollider2D>();
 		gameObject.AddComponent<PolygonCollider2D>();
+	}
+
+	public void DashPlayer()
+    {
+		Dash = true;	
+		Debug.Log("Right Click");
+		Instantiate(DashVFX, transform.position, Quaternion.identity);
+		rb.AddForce(transform.right * DashForce * Time.deltaTime * 100f, ForceMode2D.Force);
+		Dash = false;
 	}
 }
