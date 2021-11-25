@@ -2,11 +2,14 @@ using UnityEngine;
 
 public class GameCanvas : MonoBehaviour
 {
+    public Animator gameoveranimator;
     public GameObject PauseMenu;
+    public GameObject GameOverMenu;
     public bool ispaused;
     // Start is called before the first frame update
     void Start()
     {
+        GameOverMenu.SetActive(false);
         PauseMenu.SetActive(false);
         ispaused = false;
         Time.timeScale = 1f;
@@ -43,5 +46,11 @@ public class GameCanvas : MonoBehaviour
         ispaused = false;
         Time.timeScale = 1f;
         PauseMenu.SetActive(false);
+    }
+
+    public void Lose() 
+    {
+        GameOverMenu.SetActive(true);
+        gameoveranimator.SetTrigger("GameOver");
     }
 }

@@ -12,6 +12,9 @@ public class PlayerMovement : MonoBehaviour
 	public float speed = 20f;
 	public float rotationSpeed = 2f;
 	public float DashForce;
+	public float shootforce;
+	public float knockback;
+	public GameObject projectile;
 
 	[Space(15f)]
 	public Vector2 Jumpforce;
@@ -22,7 +25,8 @@ public class PlayerMovement : MonoBehaviour
 	[HideInInspector] public bool move = false;
 	[HideInInspector] public bool Jump = false;
 	[HideInInspector] public bool move_Right_side = false;
-	[HideInInspector] public bool move_left_side = false;					
+	[HideInInspector] public bool move_left_side = false;
+	[HideInInspector] public bool RotateTowardsMouse = false;
 
 	// DeepBack
 	private Rigidbody2D rb;
@@ -43,6 +47,22 @@ public class PlayerMovement : MonoBehaviour
 	{
 		if (ismoveing == true)
 		{
+			if (Input.GetMouseButtonDown(0))
+            {
+				GameObject p = Instantiate(projectile, transform.position, transform.rotation);
+				p.GetComponent<Rigidbody2D>().AddForce(p.transform.right * Time.deltaTime * shootforce);
+				rb.AddForce(-transform.right * Time.deltaTime * knockback * 100);
+            }
+
+			if (Input.GetKey(KeyCode.LeftShift))
+            {
+				RotateTowardsMouse = true;
+            }
+			if (Input.GetKeyUp(KeyCode.LeftShift))
+            {
+				RotateTowardsMouse = false;
+            }
+
 			if (Input.GetMouseButtonDown(1))
             {
 				DashPlayer();
@@ -109,7 +129,14 @@ public class PlayerMovement : MonoBehaviour
 
 	private void FixedUpdate()
 	{
+		if (RotateTowardsMouse == true)
+        {
+			Vector3 pos = Camera.main.WorldToScreenPoint(transform.position);
+			Vector3 dir = Input.mousePosition - pos;
+			float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+			transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
+		}
 
 		if (Jump == true)
 		{

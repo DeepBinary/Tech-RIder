@@ -8,6 +8,6 @@ public class CoinUpdater : MonoBehaviour
     public TextMeshProUGUI CoinsText;
     void Update()
     {
-        CoinsText.text = FindObjectOfType<GameManager>().Coins.ToString();
+        CoinsText.text = FindObjectOfType<GameManager>().CoinsLocal.ToString();
     }
 }

@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public int Coins;       
+    public int Coins;
+    public int CoinsLocal;
 
     private void Awake()
     {
+        CoinsLocal = 0;
         Coins = PlayerPrefs.GetInt("Coins");
 
         // Singleton pattern;
@@ -23,6 +25,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void Save() {
+        Coins = Coins + CoinsLocal;
         PlayerPrefs.SetInt("Coins", Coins);
     }
 
@@ -33,12 +36,12 @@ public class GameManager : MonoBehaviour
 
     public void AddCoins(int Amount) 
     {
-        Coins += Amount;
+        CoinsLocal += Amount;
         Save();
     }
     public void RemoveCoins(int Amount)
     {
-        Coins -= Amount;
+        CoinsLocal -= Amount;
         Save();
     }
 }
