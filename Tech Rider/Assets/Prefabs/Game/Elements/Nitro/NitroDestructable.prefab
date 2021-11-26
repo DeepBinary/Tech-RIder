@@ -4827,7 +4827,7 @@ GameObject:
   - component: {fileID: 608521962060258996}
   m_Layer: 0
   m_Name: NitroDestructable
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4936,5 +4936,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83ed016a05931604a99fbe6c4df3c758, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BoostForce: 0
+  IsDeleted: 0
+  BoostForce: 300
   particles: {fileID: 7121027615269769932, guid: ed7e97a3c3bd0fb42b4c30da436f632b, type: 3}

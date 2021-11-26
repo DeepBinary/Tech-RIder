@@ -4467,30 +4467,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1786267548, guid: 73e8a19ea49682bd092ca7a26010e450, type: 3}
-      propertyPath: m_Time
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5736552245468771146, guid: 73e8a19ea49682bd092ca7a26010e450, type: 3}
-      propertyPath: m_SortingOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6173614729196227059, guid: 73e8a19ea49682bd092ca7a26010e450, type: 3}
-      propertyPath: DashVFX
-      value: 
-      objectReference: {fileID: 5908649736400402030, guid: c746d7e22866cd943a188c191f00b124, type: 3}
-    - target: {fileID: 6173614729196227059, guid: 73e8a19ea49682bd092ca7a26010e450, type: 3}
-      propertyPath: knockback
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 6173614729196227059, guid: 73e8a19ea49682bd092ca7a26010e450, type: 3}
-      propertyPath: projectile
-      value: 
-      objectReference: {fileID: 6585962888056280016, guid: 263e368b404b268449232e16e6f22395, type: 3}
-    - target: {fileID: 6173614729196227059, guid: 73e8a19ea49682bd092ca7a26010e450, type: 3}
-      propertyPath: shootforce
-      value: 100000
-      objectReference: {fileID: 0}
     - target: {fileID: 6173614729196227080, guid: 73e8a19ea49682bd092ca7a26010e450, type: 3}
       propertyPath: m_Name
       value: Player
@@ -4539,8 +4515,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1786267548, guid: 73e8a19ea49682bd092ca7a26010e450, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73e8a19ea49682bd092ca7a26010e450, type: 3}
 --- !u!1 &1080565662
 GameObject:
