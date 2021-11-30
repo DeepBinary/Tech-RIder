@@ -1,7 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using CodeMonkey.Utils;
-using CodeMonkey;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour

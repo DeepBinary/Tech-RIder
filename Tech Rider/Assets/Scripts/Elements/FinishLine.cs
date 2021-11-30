@@ -23,7 +23,7 @@ public class FinishLine : MonoBehaviour
     }
 
     public void loadyouwinscreen()
-    {
+    {   
         gamecanvas.SetActive(false);
 
         Time.timeScale = 0.2f;

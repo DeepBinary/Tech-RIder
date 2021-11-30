@@ -11,6 +11,7 @@ public class GameCanvasManager : MonoBehaviour
     private void Update()
     {
         ShrinkBorder border = FindObjectOfType<ShrinkBorder>().GetComponent<ShrinkBorder>();
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             border.isshrinking = false;
@@ -18,7 +19,7 @@ public class GameCanvasManager : MonoBehaviour
         }
 
         if (PauseMenu.WindowActive == false)
-        {               
+        {
             border.isshrinking = true;
         }
     }

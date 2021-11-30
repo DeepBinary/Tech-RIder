@@ -11,7 +11,7 @@ public class Nitro : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            IsDeleted = false;
+            IsDeleted = true;
             GameObject player = collision.gameObject;
             player.GetComponent<Rigidbody2D>().AddForce(player.transform.right * BoostForce);
             Instantiate(particles, transform.position, transform.rotation);
@@ -20,6 +20,6 @@ public class Nitro : MonoBehaviour
 
     private void Awake()
     {
-        IsDeleted = true;
+        IsDeleted = false;
     }
 }
