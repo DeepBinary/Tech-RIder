@@ -21,11 +21,11 @@ public class AnimatedButton : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 
     public void OnPointerEnter(PointerEventData data)
     {
-        transform.LeanScale(new Vector3(zoomedscale, zoomedscale, 0), animationtime);
+        transform.LeanScale(new Vector3(zoomedscale, zoomedscale, 0), animationtime).setEaseInOutCirc();
     } 
 
     public void OnPointerExit(PointerEventData data)
     {
-
+        transform.LeanScale(new Vector3(1, 1, 0), animationtime).setEaseInOutCirc();
     }
 }
