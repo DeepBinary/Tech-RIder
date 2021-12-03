@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class AccountData : MonoBehaviour
 {
+    [Header("Debug values")]
     public string PlayerName;
     public int ru;
     public int rankedpoints;
     public bool IsSigned;
 
     public GameObject signInMenu;
-    // Start is called before the first frame update
+
     void Start()
     {
         IsSigned = false;
@@ -24,5 +25,15 @@ public class AccountData : MonoBehaviour
         {
             signInMenu.SetActive(true);
         }
+    }
+
+    public void LoadGameData()
+    {
+          
+    }
+
+    public void SaveGameData()
+    {
+
     }
 }

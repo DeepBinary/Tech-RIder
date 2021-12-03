@@ -69,7 +69,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -122,7 +121,8 @@ MonoBehaviour:
   DashForce: 500
   shootforce: 100000
   knockback: 60
-  projectile: {fileID: 6585962888056280016, guid: 263e368b404b268449232e16e6f22395, type: 3}
+  projectile: {fileID: 6585962888056280016, guid: 263e368b404b268449232e16e6f22395,
+    type: 3}
   Jumpforce: {x: 0, y: 10}
   Dash: 0
   ismoveing: 1

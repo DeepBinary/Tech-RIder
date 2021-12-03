@@ -12,7 +12,7 @@ public class LoseCollider : MonoBehaviour
     {
         if(collision.tag == "Player")
         {
-            GameCanvas.SetActive(false);
+            carcontroller.gameObject.SetActive(false);
             LoseMenu.gameObject.SetActive(true);
             LoseMenu.SetTrigger("GameOver");
         }
@@ -20,8 +20,8 @@ public class LoseCollider : MonoBehaviour
 
     private void Start()
     {
+        carcontroller.gameObject.SetActive(true);
         GameCanvas.SetActive(true);
-        GameCanvas = FindObjectOfType<GameCanvasManager>().gameObject;
         LoseMenu.gameObject.SetActive(false);
         carcontroller = FindObjectOfType<PlayerMovement>();
     }

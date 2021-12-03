@@ -10,9 +10,7 @@ public class PlayerMovement : MonoBehaviour
 	public float speed = 20f;
 	public float rotationSpeed = 2f;
 	public float DashForce;
-	public float shootforce;
 	public float knockback;
-	public GameObject projectile;
 
 	[Space(15f)]
 	public Vector2 Jumpforce;
@@ -45,12 +43,6 @@ public class PlayerMovement : MonoBehaviour
 	{
 		if (ismoveing == true)
 		{
-			if (Input.GetMouseButtonDown(0))
-            {
-				GameObject p = Instantiate(projectile, transform.position, transform.rotation);
-				p.GetComponent<Rigidbody2D>().AddForce(p.transform.right * Time.deltaTime * shootforce);
-				rb.AddForce(-transform.right * Time.deltaTime * knockback * 100);
-            }
 
 			if (Input.GetKey(KeyCode.LeftShift))
             {
