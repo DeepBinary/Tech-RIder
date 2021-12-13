@@ -9,12 +9,10 @@ public class PlayerMovement : MonoBehaviour
 	[Header("Movement")]
 	public float speed = 20f;
 	public float rotationSpeed = 2f;
-	public float DashForce;
 	public float knockback;
 
 	[Space(15f)]
 	public Vector2 Jumpforce;
-	[HideInInspector] public bool Dash = false;
 	[HideInInspector] public bool ismoveing = true;
 	[HideInInspector] public bool isGrounded = false;
 	[HideInInspector] public bool moveback = false;
@@ -35,7 +33,6 @@ public class PlayerMovement : MonoBehaviour
 	// SpecialFX
 	[Header("SpeicalFX")]
 	public GameObject jumpVFX;
-	public GameObject DashVFX;
 	#endregion
 
 	Vector2 mousepos;
@@ -51,11 +48,6 @@ public class PlayerMovement : MonoBehaviour
 			if (Input.GetKeyUp(KeyCode.LeftShift))
             {
 				RotateTowardsMouse = false;
-            }
-
-			if (Input.GetMouseButtonDown(1))
-            {
-				DashPlayer();
             }
 
 			// W key
@@ -189,14 +181,5 @@ public class PlayerMovement : MonoBehaviour
 		Destroy(polygoncollider);
 		polygoncollider = GetComponent<PolygonCollider2D>();
 		gameObject.AddComponent<PolygonCollider2D>();
-	}
-
-	public void DashPlayer()
-    {
-		Dash = true;	
-		Debug.Log("Right Click");
-		Instantiate(DashVFX, transform.position, Quaternion.identity);
-		rb.AddForce(transform.right * DashForce * Time.deltaTime * 100f, ForceMode2D.Force);
-		Dash = false;
 	}
 }

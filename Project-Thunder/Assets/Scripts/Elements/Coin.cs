@@ -5,7 +5,7 @@ using TMPro;
 
 public class Coin : MonoBehaviour
 {
-    public int CoinsRewarded;
+    public int RewardedCoins;
     private GameManager gamemanager;
     void Start()
     {
@@ -15,7 +15,7 @@ public class Coin : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            gamemanager.AddCoins(CoinsRewarded);
+            gamemanager.AddCoins(RewardedCoins);
             Destroy(this.gameObject);
         }
     }

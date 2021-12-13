@@ -8,7 +8,7 @@ using System;
 public class StopWatch : MonoBehaviour
 {
     bool timerActive = false;
-    float currenttime;
+    public float currenttime;
     public TextMeshProUGUI timertext;
     // Start is called before the first frame update
     void Start()

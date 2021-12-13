@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public int Coins;
-    public int CoinsLocal;
+    public int coins;
+    public int CoinsEarned;
 
     private void Awake()
     {
-        CoinsLocal = 0;
-        Coins = PlayerPrefs.GetInt("Coins");
+        CoinsEarned = 0;
+        coins = PlayerPrefs.GetInt("Coins");
 
         // Singleton pattern;
         int gamemanagercount = FindObjectsOfType<GameManager>().Length;
@@ -25,8 +25,8 @@ public class GameManager : MonoBehaviour
     }
 
     public void Save() {
-        Coins = Coins + CoinsLocal;
-        PlayerPrefs.SetInt("Coins", Coins);
+        coins = coins + CoinsEarned;
+        PlayerPrefs.SetInt("Coins", coins);
     }
 
     public int GetCoins() 
@@ -36,12 +36,15 @@ public class GameManager : MonoBehaviour
 
     public void AddCoins(int Amount) 
     {
-        CoinsLocal += Amount;
-        Save();
+        CoinsEarned += Amount;
     }
     public void RemoveCoins(int Amount)
     {
-        CoinsLocal -= Amount;
-        Save();
+        CoinsEarned -= Amount;
+    }
+
+    public void ResetManager()
+    {
+        CoinsEarned = 0;
     }
 }

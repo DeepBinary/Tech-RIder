@@ -14,15 +14,15 @@ public class LoseCollider : MonoBehaviour
         {
             carcontroller.gameObject.SetActive(false);
             LoseMenu.gameObject.SetActive(true);
-            LoseMenu.SetTrigger("GameOver");
         }
     }
 
     private void Start()
     {
+        carcontroller = FindObjectOfType<PlayerMovement>();
+        GameCanvas = FindObjectOfType<GameCanvas>().gameObject;
         carcontroller.gameObject.SetActive(true);
         GameCanvas.SetActive(true);
         LoseMenu.gameObject.SetActive(false);
-        carcontroller = FindObjectOfType<PlayerMovement>();
     }
 }

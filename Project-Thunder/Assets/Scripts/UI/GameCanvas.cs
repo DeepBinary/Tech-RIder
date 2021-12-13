@@ -1,7 +1,9 @@
 using UnityEngine;
+using TMPro;
 
 public class GameCanvas : MonoBehaviour
 {
+    public TMP_FontAsset Font;
     public Animator gameoveranimator;
     public GameObject PauseMenu;
     public GameObject GameOverMenu;
@@ -9,6 +11,12 @@ public class GameCanvas : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        TextMeshProUGUI[] texts = FindObjectsOfType<TextMeshProUGUI>();
+        
+        foreach (TextMeshProUGUI text in texts)
+        {
+            text.font = Font;
+        }
         GameOverMenu.SetActive(false);
         PauseMenu.SetActive(false);
         ispaused = false;

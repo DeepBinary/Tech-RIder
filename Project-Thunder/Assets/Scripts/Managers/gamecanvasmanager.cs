@@ -6,7 +6,7 @@ using TMPro;
 
 public class GameCanvasManager : MonoBehaviour
 {
-    public InfoPanel PauseMenu;
+    public GameObject PauseMenu;
 
     private void Update()
     {
@@ -17,15 +17,10 @@ public class GameCanvasManager : MonoBehaviour
             border.isshrinking = false;
             PauseMenu.gameObject.SetActive(true);
         }
-
-        if (PauseMenu.WindowActive == false)
-        {
-            border.isshrinking = true;
-        }
     }
 
     private void Start()
     {
-         
+        PauseMenu.SetActive(false);
     }
 }

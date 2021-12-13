@@ -332,7 +332,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 10
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -4987,9 +4987,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7688980231346178639}
   - component: {fileID: 7688980231346178636}
-  - component: {fileID: 7688980231346178609}
   - component: {fileID: 4668618593270138032}
   - component: {fileID: 795964508}
+  - component: {fileID: 1823356056}
   m_Layer: 0
   m_Name: Stage-anchor
   m_TagString: Untagged
@@ -5068,20 +5068,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7688980231346178609
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7688980231346178637}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63672d58a48136a4c8a09cdd98b2e265, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ParticlesPrefab: {fileID: 0}
-  WinScreen: {fileID: 0}
 --- !u!114 &4668618593270138032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5111,6 +5097,21 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.25
+--- !u!114 &1823356056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7688980231346178637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b47caf268db171429ecc9055cdf5c14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WinScreen: {fileID: 0}
+  coinstext: {fileID: 0}
+  timertext: {fileID: 0}
 --- !u!1 &7688980231836216382
 GameObject:
   m_ObjectHideFlags: 0
@@ -5390,7 +5391,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 5
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -5443,7 +5444,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 10
       minScalar: 5
       maxCurve:
         serializedVersion: 2

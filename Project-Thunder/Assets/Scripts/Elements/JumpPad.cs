@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class JumpPad : MonoBehaviour
 {
-    public Vector2 jumpadforce;
+    public Vector2 Force;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -13,7 +13,7 @@ public class JumpPad : MonoBehaviour
             GameObject player = collision.collider.gameObject;
             if (player.transform.position.y > this.gameObject.transform.position.y)
             {
-                player.GetComponent<Rigidbody2D>().AddForce(jumpadforce);
+                player.GetComponent<Rigidbody2D>().AddForce(Force);
             }
         }
     }
