@@ -2,7 +2,7 @@ genre : racing, fast paced.
 player first imporession : fun and responsive gameplay, sweaty hands.
 
 target platform : pc, mobile, console
-platformg goal : optimization and fun content.
+platform goal : optimization and fun content.
 
 content : racing, competitive, casual story mode
 	  multiplayer, rush, 1v1
