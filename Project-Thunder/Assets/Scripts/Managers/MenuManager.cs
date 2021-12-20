@@ -4,30 +4,46 @@ using UnityEngine;
 
 public class MenuManager : MonoBehaviour
 {
-    public GameObject[] menus;
+    public MenuManager_Menu[] menus;
     void Start()
     {
-        foreach (GameObject menu in menus)
+        foreach (MenuManager_Menu menu in menus)
         {
-            menu.SetActive(false);
+            menu.menu.SetActive(false);
+
+            if (menu.Main == true)
+            {
+                menu.menu.SetActive(true);
+            }
         }
     }
 
     public void LoadMenu(int index)
     {
-        foreach (GameObject menu in menus)
+        foreach (MenuManager_Menu menu in menus)
         {
-            menu.SetActive(false);
+            menu.menu.SetActive(false);
         }
-
-        menus[index].SetActive(true);
+        menus[index].menu.SetActive(true);
     }
 
     public void CloseMenu()
     {
-        foreach (GameObject menu in menus)
+        foreach (MenuManager_Menu menu in menus)
         {
-            menu.SetActive(false);
-        }
+            
+            menu.menu.SetActive(false);
+            if (menu.Main == true)
+            {
+                menu.menu.SetActive(true);
+            }
+        }   
     }
+}
+
+[System.Serializable]
+public class MenuManager_Menu 
+{
+    public GameObject menu;
+    public bool Main;
 }

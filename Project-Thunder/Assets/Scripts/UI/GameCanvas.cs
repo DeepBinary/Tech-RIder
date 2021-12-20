@@ -28,31 +28,33 @@ public class GameCanvas : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape)) 
         {
-            if (ispaused == false) 
+            if (ispaused == false)
             {
                 EnterPause();
-                return;
-            }
+            }            
+        }
 
-            if (ispaused == true) 
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (ispaused == true)
             {
                 ExitPause();
-                return;
             }
         }
+            
     }
 
     public void EnterPause() 
     {
         ispaused = true;
-        Time.timeScale = 0f;
+        Time.timeScale = Mathf.Lerp(1, 0f, PauseMenu.GetComponent<PauseMenu>().animationtime);
         PauseMenu.SetActive(true);
     }
 
     public void ExitPause() 
     {
         ispaused = false;
-        Time.timeScale = 1f;
+        Time.timeScale = Mathf.Lerp(0, 1, PauseMenu.GetComponent<PauseMenu>().animationtime);
         PauseMenu.SetActive(false);
     }
 

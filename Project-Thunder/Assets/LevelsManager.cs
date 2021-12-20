@@ -11,13 +11,15 @@ public class LevelsManager : MonoBehaviour
     public Level[] Levels;
     public GameObject buttonprefab;
     public int IndexOffset;
+    public GameObject window;
+    public MenuManager menu;
 
     public TMP_ColorGradient godLevelGradient;
     void Start()
     {
         for (int i = 0; i < Levels.Length; i++)
         {
-            GameObject button = Instantiate(buttonprefab, GameObject.Find("ClassicContent").transform);
+            GameObject button = Instantiate(buttonprefab, window.transform);
 
             int levelindexname = i + 1;
             button.gameObject.name = "Level " + levelindexname.ToString();
@@ -26,7 +28,8 @@ public class LevelsManager : MonoBehaviour
             Levels[i].index = i + IndexOffset;
             int Levelindex = i + IndexOffset;
 
-            button.GetComponent<Button>().onClick.AddListener (delegate () {    this.LoadLevel(Levelindex);   });         
+            button.GetComponent<Button>().onClick.AddListener (delegate () {    this.LoadLevel(Levelindex);   });
+            button.GetComponent<Button>().onClick.AddListener(delegate () { menu.CloseMenu(); });
 
             if (Levels[i].Diffuculty == Diffuculty.Easy)
             {

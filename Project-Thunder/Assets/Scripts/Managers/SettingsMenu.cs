@@ -65,16 +65,11 @@ public class SettingsMenu : MonoBehaviour
     {
         // update volume
         Volume = VolumeSlider.value;
-        MainMixer.SetFloat("volume", Volume);
-        Qualitydropdown.value = QualityIndex;
+        MainMixer.SetFloat("Volume", Volume);
 
         // Update music volume
         musicvolume = musicvolumeSlider.value;
-        MusicMixer.SetFloat("MusicVolume", Volume);
-
-        // QUalitySettings;
-        Qualitydropdown.value = QualityIndex;
-        QualityIndex = Qualitydropdown.value;
+        MusicMixer.SetFloat("MusicVolume", Volume);       
 
         // Update isfullscreen
         isfullscreentoggle.isOn = FullscreenData;
@@ -91,12 +86,17 @@ public class SettingsMenu : MonoBehaviour
 
         Volume = data.volume;
         VolumeSlider.value = Volume;
+
         QualityIndex = data.qualityindex;
+        Qualitydropdown.value = QualityIndex;
+
         QualitySettings.SetQualityLevel(QualityIndex);
         musicvolume = data.musicvolume;
         musicvolumeSlider.value = musicvolume;
+
         resolutionindex = data.resolutionindex;
         ResoutionDropdown.value = resolutionindex;
+
         FullscreenData = data.isfullscreen;
         isfullscreentoggle.isOn = FullscreenData;
     }
