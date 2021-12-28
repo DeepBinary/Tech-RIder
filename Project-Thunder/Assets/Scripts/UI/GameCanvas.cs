@@ -6,11 +6,23 @@ public class GameCanvas : MonoBehaviour
     public TMP_FontAsset Font;
     public Animator gameoveranimator;
     public GameObject PauseMenu;
-    public GameObject GameOverMenu;
-    public bool ispaused;
+    public GameObject GameOverMenu, nextlevelbutton;
+
+    public bool IsLastLevel;
+    private bool ispaused;
     // Start is called before the first frame update
     void Start()
     {
+        if (IsLastLevel)
+        {
+            nextlevelbutton.SetActive(false);
+        }
+
+        if (!IsLastLevel)
+        {
+            nextlevelbutton.SetActive(true);
+        }
+
         TextMeshProUGUI[] texts = FindObjectsOfType<TextMeshProUGUI>();
         
         foreach (TextMeshProUGUI text in texts)
