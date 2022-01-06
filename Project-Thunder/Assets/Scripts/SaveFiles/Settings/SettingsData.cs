@@ -14,7 +14,6 @@ public class SettingsData
     public int resolutionindex;
     public bool isfullscreen;
 
-
     public SettingsData (SettingsMenu SettingsData)
     {
         resolutionindex = SettingsData.resolutionindex;

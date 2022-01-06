@@ -59,14 +59,14 @@ public class GameCanvas : MonoBehaviour
     public void EnterPause() 
     {
         ispaused = true;
-        Time.timeScale = Mathf.Lerp(1, 0f, PauseMenu.GetComponent<PauseMenu>().animationtime);
+        Time.timeScale = 0f;    
         PauseMenu.SetActive(true);
     }
 
     public void ExitPause() 
     {
         ispaused = false;
-        Time.timeScale = Mathf.Lerp(0, 1, PauseMenu.GetComponent<PauseMenu>().animationtime);
+        Time.timeScale = 1f;
         PauseMenu.SetActive(false);
     }
 
