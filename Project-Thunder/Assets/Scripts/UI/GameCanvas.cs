@@ -4,25 +4,18 @@ using TMPro;
 public class GameCanvas : MonoBehaviour
 {
     public TMP_FontAsset Font;
+    public TextMeshProUGUI chargetext, rutext;
     public Animator gameoveranimator;
-    public GameObject PauseMenu;
-    public GameObject GameOverMenu, nextlevelbutton;
+    public GameObject PauseMenu, GameOverMenu, winscreen, homebutton;
 
     public bool IsLastLevel;
     private bool ispaused;
     // Start is called before the first frame update
     void Start()
     {
-        if (IsLastLevel)
-        {
-            nextlevelbutton.SetActive(false);
-        }
-
-        if (!IsLastLevel)
-        {
-            nextlevelbutton.SetActive(true);
-        }
-
+        winscreen.SetActive(false);
+        homebutton.SetActive(false);
+        
         TextMeshProUGUI[] texts = FindObjectsOfType<TextMeshProUGUI>();
         
         foreach (TextMeshProUGUI text in texts)
@@ -38,6 +31,7 @@ public class GameCanvas : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        rutext.text = FindObjectOfType<GameManager>().Earnedru.ToString();
         if (Input.GetKeyDown(KeyCode.Escape)) 
         {
             if (ispaused == false)
@@ -74,5 +68,11 @@ public class GameCanvas : MonoBehaviour
     {
         GameOverMenu.SetActive(true);
         gameoveranimator.SetTrigger("GameOver");
+    }
+
+    public void WinGameUI()
+    {
+        winscreen.SetActive(true);
+        homebutton.SetActive(true);
     }
 }

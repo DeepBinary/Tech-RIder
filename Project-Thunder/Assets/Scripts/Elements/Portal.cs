@@ -5,20 +5,15 @@ using TMPro;
 
 public class Portal : MonoBehaviour
 {
-    public GameObject WinScreen;
     public TextMeshProUGUI timertext;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
+            FindObjectOfType<GameCanvas>().WinGameUI();
             FindObjectOfType<StopWatch>().stopTimer();
             timertext.text = FindObjectOfType<StopWatch>().currenttime.ToString();
-            WinScreen.SetActive(true);
+            FindObjectOfType<GameManager>().WrapUpLevel();
         }
-    }
-
-    private void Start()
-    {
-        WinScreen.SetActive(false);
     }
 }

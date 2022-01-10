@@ -2,16 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerData : MonoBehaviour
+[System.Serializable]
+public class PlayerData
 {
-    public int coins;
-    public string PlayerName;
+    public int ru;
+    public string Playername;
     public bool FirstTime;
 
-    public PlayerData(PlayerData playerdata)
+    public PlayerData (GameManager manager)
     {
-        coins = playerdata.coins;
-        PlayerName = playerdata.name;
-        FirstTime = playerdata.FirstTime;
+        ru = manager.ru;
+        Playername = manager.playername;
+        FirstTime = manager.firsttime;
     }
 }
