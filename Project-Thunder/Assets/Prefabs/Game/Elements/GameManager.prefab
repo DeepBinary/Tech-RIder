@@ -48,3 +48,45 @@ MonoBehaviour:
   charge: 0
   playername: 
   firsttime: 0
+  ismainmenu: 0
+  UgradeButton: {fileID: 0}
+  speedtext: {fileID: 0}
+  costText: {fileID: 0}
+  playerprefab: {fileID: 8363284849434295996, guid: 8c40a711f9640ae4d84490a06cb7800d, type: 3}
+  Levels:
+  - cost: 2500
+    speed: 35
+  - cost: 3000
+    speed: 40
+  - cost: 4000
+    speed: 42
+  - cost: 4500
+    speed: 48
+  - cost: 5000
+    speed: 50
+  - cost: 5100
+    speed: 52
+  - cost: 6000
+    speed: 58
+  - cost: 7000
+    speed: 60
+  - cost: 8000
+    speed: 62
+  - cost: 8500
+    speed: 68
+  - cost: 8700
+    speed: 70
+  - cost: 9300
+    speed: 72
+  - cost: 9400
+    speed: 78
+  - cost: 9700
+    speed: 88
+  - cost: 9800
+    speed: 98
+  - cost: 20000
+    speed: 100
+  ShopUpgradeIndex: 0
+  purchasefeedback:
+  - {fileID: 0}
+  - {fileID: 0}

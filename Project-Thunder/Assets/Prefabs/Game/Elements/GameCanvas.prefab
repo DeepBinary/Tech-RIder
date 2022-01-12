@@ -2627,7 +2627,8 @@ MonoBehaviour:
   gameoveranimator: {fileID: 257663854520776004}
   PauseMenu: {fileID: 1330048087}
   GameOverMenu: {fileID: 1006461740}
-  nextlevelbutton: {fileID: 3958426675306428495}
+  winscreen: {fileID: 467579224}
+  homebutton: {fileID: 3958426675306428495}
   IsLastLevel: 1
 --- !u!114 &1787462680
 MonoBehaviour:
