@@ -49,44 +49,64 @@ MonoBehaviour:
   playername: 
   firsttime: 0
   ismainmenu: 0
-  UgradeButton: {fileID: 0}
+  playerprefab: {fileID: 8363284849434295996, guid: 8c40a711f9640ae4d84490a06cb7800d, type: 3}
+  Speedpurchasefeedback:
+  - {fileID: 0}
+  - {fileID: 0}
+  UpgradeSpeedButton: {fileID: 0}
   speedtext: {fileID: 0}
   costText: {fileID: 0}
-  playerprefab: {fileID: 8363284849434295996, guid: 8c40a711f9640ae4d84490a06cb7800d, type: 3}
   Levels:
   - cost: 2500
-    speed: 35
+    speed: 15
   - cost: 3000
-    speed: 40
+    speed: 17
   - cost: 4000
-    speed: 42
+    speed: 20
   - cost: 4500
-    speed: 48
+    speed: 28
   - cost: 5000
-    speed: 50
+    speed: 31
   - cost: 5100
-    speed: 52
+    speed: 32
   - cost: 6000
-    speed: 58
+    speed: 36
   - cost: 7000
-    speed: 60
+    speed: 40
   - cost: 8000
-    speed: 62
+    speed: 44
   - cost: 8500
-    speed: 68
+    speed: 46
   - cost: 8700
-    speed: 70
+    speed: 48
   - cost: 9300
-    speed: 72
+    speed: 50
   - cost: 9400
-    speed: 78
+    speed: 52
   - cost: 9700
-    speed: 88
+    speed: 55
   - cost: 9800
-    speed: 98
+    speed: 58
   - cost: 20000
-    speed: 100
+    speed: 60
   ShopUpgradeIndex: 0
-  purchasefeedback:
+  maxplayerspeed: 60
+  JumpPurchasefeedback:
   - {fileID: 0}
   - {fileID: 0}
+  UpgradeJumpButton: {fileID: 0}
+  jumpText: {fileID: 0}
+  jumpcostText: {fileID: 0}
+  JumpLevels:
+  - cost: 2000
+    speed: 7
+  - cost: 10000
+    speed: 9
+  - cost: 15000
+    speed: 10
+  - cost: 20000
+    speed: 15
+  - cost: 50000
+    speed: 20
+  JumpShopUpgradeIndez: 0
+  MaxJump: 0
