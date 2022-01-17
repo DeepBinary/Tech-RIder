@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Environment
+  - ShopButton;CostText
+  - ShopButton;NameText
+  - ShopButton;Skin
   layers:
   - Default
   - TransparentFX
