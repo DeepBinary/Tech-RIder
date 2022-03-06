@@ -1,4 +1,4 @@
-        using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -19,6 +19,6 @@ public class Menu : MonoBehaviour
 
 
         GetComponent<CanvasGroup>().LeanAlpha(1, animationspeed);
-        transform.LeanScale(new Vector3(1, 1, 1), animationspeed).setEaseInOutCubic();
+        transform.LeanScale(new Vector3(1, 1, 1), animationspeed).setEaseInOutExpo();
     }
 }

@@ -4,7 +4,7 @@ using TMPro;
 public class GameCanvas : MonoBehaviour
 {
     public TMP_FontAsset Font;
-    public TextMeshProUGUI chargetext, rutext;
+    public TextMeshProUGUI rutext;
     public Animator gameoveranimator;
     public GameObject PauseMenu, GameOverMenu, winscreen, homebutton;
 

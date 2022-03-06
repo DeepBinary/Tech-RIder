@@ -44,7 +44,13 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-
+        if (firsttime == true)
+        {
+            if (ismainmenu)
+            {
+                
+            }
+        }
     }
 
     public void savePlayerData()
