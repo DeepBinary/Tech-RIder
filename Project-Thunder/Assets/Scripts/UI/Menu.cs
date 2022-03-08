@@ -5,7 +5,6 @@ using UnityEngine;
 public class Menu : MonoBehaviour
 {
     public float animationspeed;
-
     private void OnEnable()
     {
         transform.LeanScale(new Vector3(0.95f, 0.95f, 1), 0.001f);

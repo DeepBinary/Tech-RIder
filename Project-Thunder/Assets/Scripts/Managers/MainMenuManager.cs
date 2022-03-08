@@ -7,12 +7,12 @@ using TMPro;
 
 public class MainMenuManager : MonoBehaviour
 {
-    [Header("AccountDetails")]
+    [Header("PlayerDetails")]
     public TextMeshProUGUI rutext;
     public TextMeshProUGUI nametext;
     public TMP_InputField inputfield;
 
-    [Header("RegisterMenu")]
+    [Header("Register")]
     public GameObject RegisterMenu;
     public GameObject[] RegisterDisable;
 
