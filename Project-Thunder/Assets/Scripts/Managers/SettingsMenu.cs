@@ -17,7 +17,6 @@ public class SettingsMenu : MonoBehaviour
     [Space(10)]
 
     //Music Volume
-
     public AudioMixer MusicMixer;
     public Slider musicvolumeSlider;
     public float musicvolume;
@@ -31,13 +30,18 @@ public class SettingsMenu : MonoBehaviour
     // Quality
     public TMP_Dropdown Qualitydropdown;
     public int QualityIndex;
-    // Resolutions
 
+    // Resolutions
     public TMP_Dropdown ResoutionDropdown;
     public int resolutionindex;
     Resolution[] resolutions;
     public Toggle isfullscreentoggle;
     public bool FullscreenData;
+
+    [Header("Customization")]
+    public GameObject DateAndTimeText;
+    public bool DisplayDateAndTime;
+    public Toggle DisplayDateAndTimeToggle;
     private void Start()
     {
         resolutions = Screen.resolutions;
@@ -63,6 +67,7 @@ public class SettingsMenu : MonoBehaviour
 
     private void Update()
     {
+        DateAndTimeText.SetActive(DisplayDateAndTimeToggle.isOn);
         // update volume
         Volume = VolumeSlider.value;
         MainMixer.SetFloat("Volume", Volume);
@@ -99,6 +104,8 @@ public class SettingsMenu : MonoBehaviour
 
         FullscreenData = data.isfullscreen;
         isfullscreentoggle.isOn = FullscreenData;
+
+        DisplayDateAndTimeToggle.isOn = data.DisplayDateAndtime;
     }
 
     public void SetQUality(int qualityindex)

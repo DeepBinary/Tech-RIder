@@ -1,5 +1,5 @@
 genre : racing, fast paced.
-player first imporession : fun and responsive gameplay, sweaty hands.
+player first impression : fun and responsive Gameplay, sweaty hands.
 
 target platform : pc, mobile, console
 platform goal : optimization and fun content.
@@ -10,13 +10,13 @@ content : racing, competitive, casual story mode
 
 user interface : all in one menus
 
-monetization : mobile ads, ingame purchases.
+monetization : mobile ads, in-game purchases.
 
 currency system : ru, ranked points
 
 shop system : the shop menu is in the all in one menu
 	      1. Skins (large amount, ru)
-	      2. Backgounds (ingame, ranked points)
+	      2. Backgounds (in-game, ranked points)
 	      3. Trails (ingame, ru)
 
 

@@ -14,6 +14,9 @@ public class SettingsData
     public int resolutionindex;
     public bool isfullscreen;
 
+    // Customization
+    public bool DisplayDateAndtime;
+
     public SettingsData (SettingsMenu SettingsData)
     {
         resolutionindex = SettingsData.resolutionindex;
@@ -21,5 +24,6 @@ public class SettingsData
         musicvolume = SettingsData.musicvolume;
         qualityindex = SettingsData.QualityIndex;
         isfullscreen = SettingsData.FullscreenData;
+        DisplayDateAndtime = SettingsData.DisplayDateAndTimeToggle.isOn;
     }
 }

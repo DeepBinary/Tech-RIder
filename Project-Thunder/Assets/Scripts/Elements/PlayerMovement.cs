@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-	#region Variables
 	// Movement
 	[Header("Movement")]
 	public float speed = 20f;
@@ -22,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
 	[HideInInspector] public bool move_left_side = false;
 	[HideInInspector] public bool RotateTowardsMouse = false;
 
-	// DeepBack
+	// Movement
 	private Rigidbody2D rb;
 	private PolygonCollider2D polygoncollider;
 
@@ -33,7 +32,6 @@ public class PlayerMovement : MonoBehaviour
 	// SpecialFX
 	[Header("SpeicalFX")]
 	public GameObject jumpVFX;
-	#endregion
 
 	Vector2 mousepos;
 	private void Update()
@@ -117,7 +115,6 @@ public class PlayerMovement : MonoBehaviour
 			Vector3 dir = Input.mousePosition - pos;
 			float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
 			transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-
 		}
 
 		if (Jump == true)

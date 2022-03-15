@@ -5109,8 +5109,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b47caf268db171429ecc9055cdf5c14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WinScreen: {fileID: 0}
   timertext: {fileID: 0}
+  fireworks_vfx: {fileID: 195399227480799979, guid: b9fae954a0bfb45488674ca556d01097, type: 3}
 --- !u!1 &7688980231836216382
 GameObject:
   m_ObjectHideFlags: 0
