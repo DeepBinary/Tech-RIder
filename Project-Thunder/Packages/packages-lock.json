@@ -149,6 +149,7 @@
     },
     "com.unity.ide.vscode": {
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:Project-V/Packages/packages-lock.json
 <<<<<<< HEAD:Project-V/Packages/packages-lock.json
 <<<<<<< HEAD:Project-V/Packages/packages-lock.json
@@ -159,6 +160,8 @@
 >>>>>>> parent of 1ec4780 (0.5.1):Project-Thunder/Packages/packages-lock.json
 =======
 >>>>>>> parent of 596db99 (removed duplicate project):Project-Thunder/Packages/packages-lock.json
+=======
+>>>>>>> parent of 1ec4780 (0.5.1)
 =======
 >>>>>>> parent of 1ec4780 (0.5.1)
       "version": "1.2.4",
@@ -212,11 +215,15 @@
     },
     "com.unity.test-framework": {
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:Project-V/Packages/packages-lock.json
       "version": "1.1.30",
 =======
       "version": "1.1.29",
 >>>>>>> parent of 596db99 (removed duplicate project):Project-Thunder/Packages/packages-lock.json
+=======
+      "version": "1.1.30",
+>>>>>>> parent of 1ec4780 (0.5.1)
 =======
       "version": "1.1.30",
 >>>>>>> parent of 1ec4780 (0.5.1)
