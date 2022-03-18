@@ -13,6 +13,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:Project-V/Packages/manifest.json
 <<<<<<< HEAD:Project-V/Packages/manifest.json
     "com.unity.ide.visualstudio": "2.0.14",
@@ -27,11 +28,14 @@
 >>>>>>> parent of 1ec4780 (0.5.1)
 =======
 >>>>>>> parent of 1ec4780 (0.5.1)
+=======
+>>>>>>> parent of 1ec4780 (0.5.1)
     "com.unity.ide.visualstudio": "2.0.12",
     "com.unity.ide.vscode": "1.2.4",
     "com.unity.performance.profile-analyzer": "1.1.1",
     "com.unity.postprocessing": "3.2.0",
     "com.unity.test-framework": "1.1.30",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -52,6 +56,8 @@
     "com.unity.ide.vscode": "1.2.4",
     "com.unity.test-framework": "1.1.29",
 >>>>>>> parent of 596db99 (removed duplicate project):Project-Thunder/Packages/manifest.json
+=======
+>>>>>>> parent of 1ec4780 (0.5.1)
 =======
 >>>>>>> parent of 1ec4780 (0.5.1)
 =======
