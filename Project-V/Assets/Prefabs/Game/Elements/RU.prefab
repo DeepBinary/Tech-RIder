@@ -31,7 +31,11 @@ Transform:
   m_LocalPosition: {x: 15.84, y: -10.71, z: 0}
 <<<<<<< HEAD:Project-V/Assets/Prefabs/Game/Elements/RU.prefab
 <<<<<<< HEAD:Project-V/Assets/Prefabs/Game/Elements/RU.prefab
+<<<<<<< HEAD:Project-V/Assets/Prefabs/Game/Elements/RU.prefab
   m_LocalScale: {x: 0.04, y: 0.04, z: 1}
+=======
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
+>>>>>>> parent of c5553c2 (Update):Project-Thunder/Assets/Prefabs/Game/Elements/RU.prefab
 =======
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
 >>>>>>> parent of c5553c2 (Update):Project-Thunder/Assets/Prefabs/Game/Elements/RU.prefab
