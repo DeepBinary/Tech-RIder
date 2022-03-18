@@ -43,8 +43,13 @@ PlayerSettings:
   m_VirtualRealitySplashScreen: {fileID: 0}
   m_HolographicTrackingLossScreen: {fileID: 0}
 <<<<<<< HEAD:Project-V/ProjectSettings/ProjectSettings.asset
+<<<<<<< HEAD:Project-V/ProjectSettings/ProjectSettings.asset
   defaultScreenWidth: 1920
   defaultScreenHeight: 1080
+=======
+  defaultScreenWidth: 1366
+  defaultScreenHeight: 768
+>>>>>>> parent of 1ec4780 (0.5.1):Project-Thunder/ProjectSettings/ProjectSettings.asset
 =======
   defaultScreenWidth: 1366
   defaultScreenHeight: 768

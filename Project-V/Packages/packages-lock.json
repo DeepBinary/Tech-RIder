@@ -115,9 +115,12 @@
     },
     "com.unity.ide.vscode": {
 <<<<<<< HEAD:Project-V/Packages/packages-lock.json
+<<<<<<< HEAD:Project-V/Packages/packages-lock.json
       "version": "1.2.5",
       "depth": 0,
 =======
+=======
+>>>>>>> parent of 1ec4780 (0.5.1):Project-Thunder/Packages/packages-lock.json
       "version": "1.2.4",
       "depth": 0,
       "source": "registry",
